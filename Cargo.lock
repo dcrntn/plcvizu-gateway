@@ -346,6 +346,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8b870d8c151b6f2fb93e84a13146138f05d02ed11c7e7c54f8826aaaf7c9f184"
 
 [[package]]
+name = "plcvizu-gateway"
+version = "0.1.1"
+dependencies = [
+ "futures-channel",
+ "futures-util",
+ "tokio",
+ "tokio-tungstenite",
+]
+
+[[package]]
 name = "ppv-lite86"
 version = "0.2.17"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -454,16 +464,6 @@ name = "smallvec"
 version = "1.11.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "62bb4feee49fdd9f707ef802e22365a35de4b7b299de4763d44bfea899442ff9"
-
-[[package]]
-name = "sock-to-websock"
-version = "0.1.0"
-dependencies = [
- "futures-channel",
- "futures-util",
- "tokio",
- "tokio-tungstenite",
-]
 
 [[package]]
 name = "socket2"

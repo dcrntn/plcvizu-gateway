@@ -114,6 +114,7 @@ async fn main() -> Result<(), IoError> {
         .unwrap_or_else(|| "127.0.0.1:34126".to_string());
 
     let addr_to_displ = addr_udp_read.clone();
+    let addr_to_displ_write = addr_udp_write.clone();
 
     let socket_udp_read = UdpSocket::bind(addr_udp_read).expect("Couldn't bind udp socket");
     socket_udp_read
@@ -131,8 +132,8 @@ async fn main() -> Result<(), IoError> {
     let listener = try_socket.expect("Failed to bind");
 
     println!(
-        "Listening on: {} for websockets and on: {} for UDP connections",
-        addr_ws, addr_to_displ
+        "Websocket: {} | UDP read {} | UDP write: {}",
+        addr_ws, addr_to_displ, addr_to_displ_write
     );
 
     // Spawns a new thread to handle the UDP read.
