@@ -7,7 +7,7 @@ The concept was based on the fact - that in some rare cases the built in CODESYS
 The developement was done using a raspberry pi, with the CODESYS runtime. But in theory all PLCs - that support UDP sockets and let you run some custom programs on the OS - could be used.
 
 ## Example
-
+An example HTML page and CODESYS project can be found [here](https://github.com/dcrntn/plcvizu-gateway-sample)
 
 ## Usage
 1. Clone this repo, and build for your architecture.
